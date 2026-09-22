@@ -10,11 +10,12 @@ const url = (`https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&unit
         console.log(data)
         const icon = data.weather[0].icon
         const condition = data.weather[0].description
-        // console.log(data.weather.icon)
+        const fahrenheit = data.main.temp * 9/5 + 32
+        const fahrenheitFeelsLike = data.main.feels_like * 9/5 + 32
         
 
-        document.querySelector('.feelsLike').innerText = `the weather in ${inputVal} feels like` + ' ' + data.main.temp+ ' C'
-        document.querySelector('.chicken').innerText = `the weather in ${inputVal} is` + ' ' + data.main.feels_like+ ' C'
+        document.querySelector('.feelsLike').innerText = `the weather in ${inputVal} feels like` + ' ' + fahrenheit.toFixed(2)+ ' F'
+        document.querySelector('.chicken').innerText = `the weather in ${inputVal} is` + ' ' + fahrenheitFeelsLike.toFixed(2)+ ' F'
         document.querySelector('.condition').innerText = `You can expect ${condition}`
         document.querySelector('.icon').src = `https://openweathermap.org/payload/api/media/file/${icon}.png`
         
