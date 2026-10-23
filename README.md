@@ -2,6 +2,8 @@
 
 Type in a city, get the temperature in Fahrenheit, what it feels like, the conditions, and the little weather icon.
 
+**Live site:** https://weather-api-bootcamp.vercel.app
+
 ![Weather Checker screenshot](screenshot.jpg)
 
 ## How the code works
