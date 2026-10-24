@@ -3,7 +3,7 @@ document.querySelector('.temp').addEventListener('click',checkTemp)
 function checkTemp(){
     const inputVal = document.querySelector('.cityName').value.toLowerCase()
     const inputValCountry = document.querySelector('.countryName').value.toLowerCase()
-const url = (`https://api.openweathermap.org/data/2.5/weather?q=${inputVal},${inputValCountry}&units=metric&appid=a7cd9d6f231fa5ce3c49b0c0373bc369`)
+const url = (`/api/weather?q=${inputVal},${inputValCountry}`)
 
     fetch(url)
     .then(res => res.json())
@@ -27,5 +27,4 @@ const url = (`https://api.openweathermap.org/data/2.5/weather?q=${inputVal},${in
     console.log(`error ${err}`)
 })
 }
-
 
